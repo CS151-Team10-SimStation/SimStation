@@ -1,46 +1,55 @@
 package simstation;
-import mvc.*;
+
+import mvc.AppFactory;
+import mvc.Command;
+import mvc.Model;
+import mvc.View;
 
 import java.io.Serializable;
 
 public class SimulationFactory implements AppFactory, Serializable {
-    public Model makeModel() {return new Simulation();}
+    @Override
+    public Model makeModel() {
+        return new Simulation();
+    }
 
-    public View makeView(Model m) {return new SimulationView((Simulation) m);};
+    @Override
+    public View makeView(Model m) {
+        return new SimulationView((Simulation) m);
+    }
 
-    public String getTitle() {return "SimStation";}
+    @Override
+    public String getTitle() {
+        return "SimStation";
+    }
 
+    @Override
     public String[] getEditCommands() {
         return new String[]{"Start", "Suspend", "Resume", "Stop", "Stats"};
     }
 
-
+    @Override
     public Command makeEditCommand(Model model, String cmmd) {
-//        switch (cmmd) {
-//            case "Start": {
-//                return new StartCommand();
-//            }
-//            case "Suspend": {
-//                return new SuspendCommand();
-//            }
-//            case "Resume": {
-//                return new ResumeCommand();
-//            }
-//            case "Stop": {
-//                return new StopCommand();
-//            }
-//            case "Stats": {
-//                return new StatsCommand();
-//            }
-//        }
+        if (cmmd.equals("Start")) return new StartCommand(model);
+        if (cmmd.equals("Stop")) return new StopCommand(model);
+        if (cmmd.equals("Suspend")) return new SuspendCommand(model);
+        if (cmmd.equals("Resume")) return new ResumeCommand(model);
+        if (cmmd.equals("Stats")) return new StatsCommand(model);
         return null;
     }
 
+    @Override
     public String[] getHelp() {
-        return new String[]{
-                "Info about SimStation (update later)"};
+        String[] commands = new String[5];
+        commands[0] = "Start: Start the simulation.";
+        commands[1] = "Stop: Stop the simulation.";
+        commands[2] = "Suspend: Pause the simulation.";
+        commands[3] = "Resume: Resume the simulation.";
+        commands[4] = "Stats: Get simulation stats.";
+        return commands;
     }
 
+    @Override
     public String about() {
         return "SimStation version 1.0. Copyright 2021 by Junsheng, Paul, and Samantha";
     }

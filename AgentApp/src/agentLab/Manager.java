@@ -1,7 +1,9 @@
 package agentLab;
-import java.util.*;
 
-public class Manager  extends Console {
+import java.util.LinkedList;
+import java.util.List;
+
+public class Manager extends Console {
 
     private List<Agent> agents;
 
@@ -21,18 +23,27 @@ public class Manager  extends Console {
 
     protected String execute(String cmmd) throws Exception {
         if (cmmd.equalsIgnoreCase("s")) {
-            for(Agent a: agents) { a.suspend(); }
+            for (Agent a : agents) {
+                a.suspend();
+            }
         } else if (cmmd.equalsIgnoreCase("r")) {
-            for(Agent a: agents) { a.resume(); }
+            for (Agent a : agents) {
+                a.resume();
+            }
         } else if (cmmd.equalsIgnoreCase("g")) {
-            for(Agent a: agents) {
+            for (Agent a : agents) {
                 Thread thread = new Thread(a);
                 thread.start();
             }
         } else if (cmmd.equalsIgnoreCase("h")) {
-            for(Agent a: agents) { a.stop(); }
+            for (Agent a : agents) {
+                a.stop();
+            }
         } else if (cmmd.equalsIgnoreCase("d")) {
-            for(Agent a: agents) { System.out.println(a); };
+            for (Agent a : agents) {
+                System.out.println(a);
+            }
+            ;
         } else {
             throw new Exception("unrecognized command: " + cmmd);
         }

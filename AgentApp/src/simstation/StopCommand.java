@@ -1,5 +1,17 @@
 package simstation;
 
-public class StopCommand {
+import mvc.Command;
+import mvc.Model;
+
+public class StopCommand extends Command {
+    public StopCommand(Model model) {
+        super(model);
+    }
+
+    public void execute() throws Exception {
+        System.out.println("Stop Command executed."); // To debug
+        Simulation s = (Simulation) model;
+        s.stop();
+    }
     //stop altogether
 }

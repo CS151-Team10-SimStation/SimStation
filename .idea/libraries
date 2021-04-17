@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="libraryTable">
+    <library name="algs4">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/Downloads/algs4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/Downloads/algs4.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="stdlib">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/Downloads/stdlib.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/Downloads/stdlib.jar!/" />
+      </SOURCES>
+    </library>
+  </component>
+</project>

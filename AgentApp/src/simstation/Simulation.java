@@ -5,6 +5,10 @@ import mvc.Utilities;
 
 import java.util.*;
 
+// Revision History:
+// 4/16/21: Paul updated Simulation class.
+//          Added getNeighbor(), getSize(), addAgent(), removeAgent(), stats(), changed().
+
 public class Simulation extends Model {
     public static final int SIZE = 250; // World size.
     protected List<Agent> agents; // List of Agents.
@@ -79,7 +83,7 @@ public class Simulation extends Model {
         }
         stopTimer();
     }
-    
+
 
     // Other necessary methods.
 
@@ -88,12 +92,14 @@ public class Simulation extends Model {
         return agents.size();
     }
 
+    // Used for populate().
     public synchronized void addAgent(Agent a) {
         agents.add(a);
         a.setWorld(this);
         System.out.printf("New Agent at (%d, %d) %n", a.xc, a.yc);
     }
 
+    // Could be useful??
     public synchronized void removeAgent(Agent a) {
         agents.remove(a);
         a.stop();
@@ -115,7 +121,6 @@ public class Simulation extends Model {
     }
 
     // The code below is all for Timer stuff.
-
     //called when start simulation and resume simulation
     private void startTimer() {
         timer = new Timer();
@@ -134,7 +139,4 @@ public class Simulation extends Model {
             //changed();
         }
     }
-
-    // etc.
-
 }

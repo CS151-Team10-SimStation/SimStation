@@ -3,6 +3,8 @@ package simstation;
 import mvc.Command;
 import mvc.Model;
 
+// Revision History:
+// 4/16/21: Paul updated SuspendCommand class.
 public class SuspendCommand extends Command {
     public SuspendCommand(Model model) {
         super(model);

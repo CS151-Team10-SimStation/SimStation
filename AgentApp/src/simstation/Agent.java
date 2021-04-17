@@ -4,34 +4,27 @@ import mvc.Utilities;
 
 import java.io.Serializable;
 
+// Revision History:
 // 4/16/21: Paul updated Agent class.
-//          Added start().
-abstract public class Agent implements Runnable, Serializable {
-    // protected String name;
-    protected Thread myThread;
-    private boolean suspended, stopped;
-    protected Simulation world;
-    protected int xc, yc;
-    protected Heading heading;
+//          Added start(), move(), proximity(), setWorld().
 
+abstract public class Agent implements Runnable, Serializable {
+    protected Thread myThread; // Thread of the Agent.
+    private boolean suspended, stopped; // Used for synchronization.
+    protected Simulation world; // The world/manager of the Agent.
+    protected int xc, yc; // Agent x- and y-coordinates.
+    protected Heading heading; // Agent heading.
+
+    // Constructor
     public Agent() {
-        // this.name = name;
+        // Initialize instances.
         suspended = false;
         stopped = false;
         myThread = null;
+        // Set random location within the size of the World.
         xc = Utilities.rng.nextInt(world.SIZE);
         yc = Utilities.rng.nextInt(world.SIZE);
     }
-
-//    public void setManager(Manager m) { manager = m; }
-//    public String getName() { return name; }
-//    public synchronized String toString() {
-//        String result = name;
-//        if (stopped) result += " (stopped)";
-//        else if (suspended) result += " (suspended)";
-//        else result += " (running)";
-//        return result;
-//    }
 
     // thread stuff:
     public synchronized void start() {
@@ -83,28 +76,24 @@ abstract public class Agent implements Runnable, Serializable {
         while (!isStopped()) {
             try {
                 update();
-                Thread.sleep(1000);
+                Thread.sleep(200);
                 checkSuspended();
             } catch (InterruptedException e) {
                 Utilities.error(e);
             }
         }
-//        manager.stdout.println(name + " stopped");
     }
 
     // To be overridden by customizations.
     public abstract void update();
 
+    // Move method. Can be overridden.
     public void move(int step) {
-        int oldXc = xc;
-        int oldYc = yc;
         if (heading == Heading.NORTH) yc -= step;
         if (heading == Heading.SOUTH) yc += step;
         if (heading == Heading.WEST) xc -= step;
         if (heading == Heading.EAST) xc += step;
-        world.changed("xComp", oldXc, xc);
-        world.changed("yComp", oldYc, yc);
-        System.out.printf("Drunk has moved %d steps %s %n", step, heading.toString());
+        world.changed();
     }
 
     // Helper method for distance between two agents.

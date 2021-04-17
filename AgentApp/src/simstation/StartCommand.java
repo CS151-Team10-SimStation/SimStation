@@ -3,6 +3,8 @@ package simstation;
 import mvc.Command;
 import mvc.Model;
 
+// Revision History:
+// 4/16/21: Paul updated StartCommand class.
 public class StartCommand extends Command {
     public StartCommand(Model model) {
         super(model);

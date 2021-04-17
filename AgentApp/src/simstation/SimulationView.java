@@ -6,37 +6,29 @@ import mvc.View;
 import java.awt.*;
 import java.beans.PropertyChangeEvent;
 
+// Revision History:
+// 4/16/21: Paul updated SimulationView class.
+//          Added paintComponent(), propertyChange().
 public class SimulationView extends View {
-    private int agentSize = 10;
-    private Simulation world;
+    private final int AGENTSIZE = 5;
 
     public SimulationView(Model model) {
         super(model);
-        world = (Simulation) model;
+
     }
 
+    // Draw a white oval of diameter AGENTSIZE for each agent.
     public void paintComponent(Graphics gc) {
         super.paintComponent(gc);
+        Simulation world = (Simulation) model;
         for (Agent a : world.agents) {
             gc.setColor(Color.WHITE);
-            gc.fillOval(a.xc, a.yc, agentSize, agentSize);
+            gc.fillOval(a.xc, a.yc, AGENTSIZE, AGENTSIZE);
         }
     }
 
+    // Update view every time an Agent run().
     public void propertyChange(PropertyChangeEvent evt) {
-        int x = 0, y = 0;
-        boolean xIsChanged = false, yisChanged = false;
-        if (evt.getPropertyName().equals("xComp")) {
-            x = (Integer) evt.getNewValue();
-            xIsChanged = true;
-        }
-        if (evt.getPropertyName().equals("yComp")) {
-            y = (Integer) evt.getNewValue();
-            yisChanged = true;
-        }
-        if (xIsChanged && yisChanged) {
-            repaint(x, y, agentSize, agentSize);
-        }
+        repaint();
     }
-
 }

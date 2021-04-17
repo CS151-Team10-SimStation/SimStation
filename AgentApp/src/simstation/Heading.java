@@ -2,11 +2,13 @@ package simstation;
 
 import mvc.Utilities;
 
+// Revision History:
 // 4/16/21: Paul updated Heading class.
 //          Added enum constants and methods.
 public enum Heading {
     NORTH, EAST, SOUTH, WEST;
 
+    // Convert String to Heading.
     public static Heading parse(String heading) {
         if (heading.equalsIgnoreCase("north")) return NORTH;
         if (heading.equalsIgnoreCase("south")) return SOUTH;
@@ -16,6 +18,7 @@ public enum Heading {
         return null;
     }
 
+    // Generate random heading.
     public static Heading random() {
         int luck = Utilities.rng.nextInt(4);
         if (luck == 0) return NORTH;

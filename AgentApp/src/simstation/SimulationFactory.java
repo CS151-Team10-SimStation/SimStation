@@ -1,22 +1,30 @@
 package simstation;
-
+/* EDITS
+samantha (4/16) -- modified getHelp
+ */
 import mvc.AppFactory;
 import mvc.Command;
 import mvc.Model;
 import mvc.View;
 
 import java.io.Serializable;
-
+/* History
+4/16/21: Samantha updated SimulationFactory; added getters and setters to sim
+ */
 public class SimulationFactory implements AppFactory, Serializable {
+    private Simulation sim = new Simulation();
+
     @Override
-    public Model makeModel() {
-        return new Simulation();
-    }
+    public Model makeModel() {return sim;}
+
+    public Simulation getSim() { return this.sim; }
+    public void setSim(Simulation sim) { this.sim = sim; }
 
     @Override
     public View makeView(Model m) {
-        return new SimulationView((Simulation) m);
+        return new SimulationView(m);
     }
+    public View getView(Model m) { return new SimulationView(sim); }
 
     @Override
     public String getTitle() {
@@ -38,14 +46,17 @@ public class SimulationFactory implements AppFactory, Serializable {
         return null;
     }
 
+
+    //will override for each different simulation
     @Override
     public String[] getHelp() {
-        String[] commands = new String[5];
-        commands[0] = "Start: Start the simulation.";
-        commands[1] = "Stop: Stop the simulation.";
-        commands[2] = "Suspend: Pause the simulation.";
-        commands[3] = "Resume: Resume the simulation.";
-        commands[4] = "Stats: Get simulation stats.";
+        String[] commands = new String[6];
+//        commands[0] = "Start: Start the simulation.";
+//        commands[1] = "Stop: Stop the simulation.";
+//        commands[2] = "Suspend: Pause the simulation.";
+//        commands[3] = "Resume: Resume the simulation.";
+//        commands[4] = "Stats: Get simulation stats.";
+//        commands[5] = "info about specific simulation will go here";
         return commands;
     }
 

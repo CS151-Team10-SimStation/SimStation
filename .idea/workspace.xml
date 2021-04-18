@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2f95e95-3829-42a8-8274-773a2b8be12e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgentApp/src/flocking/Birds.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgentApp/src/flocking/FlockingFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgentApp/src/flocking/FlockingSimulation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgentApp/src/plague/People.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgentApp/src/plague/PlagueFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgentApp/src/plague/PlagueSimulation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgentApp/src/plague/PlagueView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgentApp/src/prisonerDilemma/Cheat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgentApp/src/prisonerDilemma/Cooperate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgentApp/src/prisonerDilemma/DecisionStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgentApp/src/prisonerDilemma/Prisoner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgentApp/src/prisonerDilemma/PrisonerSimulation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgentApp/src/prisonerDilemma/RandomlyCooperate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgentApp/src/prisonerDilemma/TitForTat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SimStation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SimStation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgentApp/src/randomwalk/RandomWalkSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgentApp/src/randomwalk/RandomWalkSimulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgentApp/src/simstation/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgentApp/src/simstation/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgentApp/src/simstation/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgentApp/src/simstation/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgentApp/src/simstation/SimulationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgentApp/src/simstation/SimulationFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgentApp/src/simstation/SimulationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgentApp/src/simstation/SimulationView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +38,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -35,6 +56,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1rFGCwnmkV9kfxptVnYUGdz272q" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="autoscrollFromSource" value="true" />
@@ -53,13 +77,29 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.RandomWalkSimulation">
+  <component name="RunManager" selected="Application.PrisonerSimulation">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
-    <configuration name="AgentDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="agentLab.AgentDemo" />
+    <configuration name="FlockingSimulation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="flocking.FlockingSimulation" />
+      <module name="SimStation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlagueSimulation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="plague.PlagueSimulation" />
+      <module name="SimStation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrisonerSimulation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="prisonerDilemma.PrisonerSimulation" />
       <module name="SimStation" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -97,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PrisonerSimulation" />
+        <item itemvalue="Application.PlagueSimulation" />
+        <item itemvalue="Application.FlockingSimulation" />
         <item itemvalue="Application.SimulationPanel" />
         <item itemvalue="Application.RandomWalkSimulation" />
-        <item itemvalue="Application.AgentDemo" />
-        <item itemvalue="Application.RandomWalkSimulation" />
-        <item itemvalue="Application.SimulationPanel" />
       </list>
     </recent_temporary>
   </component>
@@ -111,42 +151,53 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fixed SimulationView. Added comments." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="453" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1618564680814">
-      <screen x="0" y="25" width="1280" height="775" />
+    <state x="680" y="137" key="#com.intellij.ide.util.MemberChooser" timestamp="1618706837140">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="680" y="137" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1618706837140" />
     <state x="453" y="123" key="#com.intellij.ide.util.MemberChooser/0.25.1280.775@0.25.1280.775" timestamp="1618564680814" />
     <state x="-1366" y="124" key="CommitChangelistDialog2" timestamp="1618618686137">
       <screen x="-1920" y="25" width="1920" height="1055" />
     </state>
     <state x="-1366" y="124" key="CommitChangelistDialog2/0.25.1280.775/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1618618686137" />
-    <state width="1920" height="64" key="GridCell.Tab.0.bottom" timestamp="1618618709202">
-      <screen x="-1920" y="25" width="1920" height="1055" />
-    </state>
-    <state width="1920" height="64" key="GridCell.Tab.0.bottom/0.25.1280.775/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1618618709202" />
-    <state width="1280" height="58" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1618570051741" />
-    <state width="1920" height="64" key="GridCell.Tab.0.center" timestamp="1618618709201">
-      <screen x="-1920" y="25" width="1920" height="1055" />
-    </state>
-    <state width="1920" height="64" key="GridCell.Tab.0.center/0.25.1280.775/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1618618709201" />
-    <state width="1280" height="58" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1618570051739" />
-    <state width="1920" height="64" key="GridCell.Tab.0.left" timestamp="1618618709200">
-      <screen x="-1920" y="25" width="1920" height="1055" />
-    </state>
-    <state width="1920" height="64" key="GridCell.Tab.0.left/0.25.1280.775/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1618618709200" />
-    <state width="1280" height="58" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1618570051736" />
-    <state width="1920" height="64" key="GridCell.Tab.0.right" timestamp="1618618709201">
-      <screen x="-1920" y="25" width="1920" height="1055" />
-    </state>
-    <state width="1920" height="64" key="GridCell.Tab.0.right/0.25.1280.775/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1618618709201" />
-    <state width="1280" height="58" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1618570051740" />
-    <state x="843" y="423" width="557" height="259" key="MultipleFileMergeDialog" timestamp="1618701147573">
+    <state width="1653" height="400" key="GridCell.Tab.0.bottom" timestamp="1618710171062">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state x="843" y="423" width="557" height="259" key="MultipleFileMergeDialog/0.25.1920.1055@0.25.1920.1055" timestamp="1618701147573" />
-    <state x="128" y="25" key="SettingsEditor" timestamp="1618564404203">
-      <screen x="0" y="25" width="1280" height="775" />
+    <state width="1920" height="400" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1618709617601" />
+    <state width="1920" height="64" key="GridCell.Tab.0.bottom/0.25.1280.775/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1618618709202" />
+    <state width="1280" height="58" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1618570051741" />
+    <state width="1653" height="400" key="GridCell.Tab.0.bottom/0.25.1920.1055@0.25.1920.1055" timestamp="1618710171062" />
+    <state width="1653" height="400" key="GridCell.Tab.0.center" timestamp="1618710171059">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
+    <state width="1920" height="400" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1618709617596" />
+    <state width="1920" height="64" key="GridCell.Tab.0.center/0.25.1280.775/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1618618709201" />
+    <state width="1280" height="58" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1618570051739" />
+    <state width="1653" height="400" key="GridCell.Tab.0.center/0.25.1920.1055@0.25.1920.1055" timestamp="1618710171059" />
+    <state width="1653" height="400" key="GridCell.Tab.0.left" timestamp="1618710171058">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state width="1920" height="400" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1618709617592" />
+    <state width="1920" height="64" key="GridCell.Tab.0.left/0.25.1280.775/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1618618709200" />
+    <state width="1280" height="58" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1618570051736" />
+    <state width="1653" height="400" key="GridCell.Tab.0.left/0.25.1920.1055@0.25.1920.1055" timestamp="1618710171058" />
+    <state width="1653" height="400" key="GridCell.Tab.0.right" timestamp="1618710171061">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state width="1920" height="400" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1618709617598" />
+    <state width="1920" height="64" key="GridCell.Tab.0.right/0.25.1280.775/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1618618709201" />
+    <state width="1280" height="58" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1618570051740" />
+    <state width="1653" height="400" key="GridCell.Tab.0.right/0.25.1920.1055@0.25.1920.1055" timestamp="1618710171061" />
+    <state x="843" y="423" width="557" height="259" key="MultipleFileMergeDialog" timestamp="1618702784947">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="843" y="423" width="557" height="259" key="MultipleFileMergeDialog/0.25.1920.1055@0.25.1920.1055" timestamp="1618702784947" />
+    <state x="192" y="0" key="SettingsEditor" timestamp="1618703345879">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="192" y="0" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1618703345879" />
     <state x="128" y="25" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1618564404203" />
+    <state x="192" y="25" key="SettingsEditor/0.25.1920.1055@0.25.1920.1055" timestamp="1618702889223" />
     <state x="-1360" y="289" key="Vcs.Push.Dialog.v2" timestamp="1618618691303">
       <screen x="-1920" y="25" width="1920" height="1055" />
     </state>

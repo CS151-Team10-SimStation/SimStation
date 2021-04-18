@@ -5,17 +5,21 @@ import mvc.Utilities;
 
 import java.util.*;
 
-// Revision History:
-// 4/16/21: Paul updated Simulation class.
-//          Added getNeighbor(), getSize(), addAgent(), removeAgent(), stats(), changed().
+/* Revision History:
+4/16/21: Paul updated Simulation class.
+         Added getNeighbor(), getSize(), addAgent(), removeAgent(), stats(), changed().
+4/16/21: Samantha updated Simulation with set number of agents and changed clock to protected
+         Added getAgentList()
+ */
 
 public class Simulation extends Model {
     public static final int SIZE = 250; // World size.
-    protected List<Agent> agents; // List of Agents.
+    public List<Agent> agents; // List of Agents.
+    public Integer NUM_OF_AGENTS= 250; // initialize number of agents
 
     // Timer stuff (given).
     private Timer timer;
-    private int clock;
+    protected int clock;
 
     // Constructor.
     public Simulation() {
@@ -139,4 +143,9 @@ public class Simulation extends Model {
             //changed();
         }
     }
+
+    public List<Agent> getAgentList() {
+        return agents;
+    }
+
 }

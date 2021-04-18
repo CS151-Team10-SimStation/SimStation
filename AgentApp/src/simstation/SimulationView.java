@@ -9,8 +9,9 @@ import java.beans.PropertyChangeEvent;
 // Revision History:
 // 4/16/21: Paul updated SimulationView class.
 //          Added paintComponent(), propertyChange().
+// 4/16/21: Samantha made AGENTSIZE protected instead of private
 public class SimulationView extends View {
-    private final int AGENTSIZE = 5;
+    protected final int AGENTSIZE = 5;
 
     public SimulationView(Model model) {
         super(model);
